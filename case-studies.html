@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zahavan</title>
+    <title>Case Studies - Zahavan Consultancy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +21,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="partners.html">Partners</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="case-studies.html" class="active">Case Studies</a></li>
                 </ul>
             </nav>
             <div class="cta-button">
@@ -40,11 +40,10 @@
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="content">
-                <h1 class="fade-in">The Power of <br>Good Advice</h1>
-                <p class="fade-in delay-1">Expert business consultancy to help your company grow, innovate, and succeed in today's competitive market.</p>
-                <a href="#services" class="btn fade-in delay-2">Learn More</a>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="fade-in">Case Studies</h1>
+                <p class="fade-in delay-1">Real-world examples of how we've helped businesses succeed.</p>
             </div>
             <div class="wave-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave">
@@ -56,81 +55,75 @@
             </div>
         </section>
 
-        <section class="services-preview" id="services">
+        <section class="case-studies-intro">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up">
-                        <div class="icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                        </div>
-                        <h3>Market Entry Strategies</h3>
-                        <p>We help businesses navigate new markets with confidence through export/import strategies, market assessment, and regulatory compliance.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>
-                        </div>
-                        <h3>Data and Analytics</h3>
-                        <p>Transform your business with data-driven insights, including data strategy, modelling, storytelling, and AI development and deployment.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </div>
-                        <h3>Business Coaching</h3>
-                        <p>Elevate your business performance through mentoring, coaching, and proven strategies for sustainable business growth.</p>
-                    </div>
-                </div>
-                <div class="center-btn">
-                    <a href="services.html" class="btn btn-primary">View All Services</a>
+                <div class="case-studies-intro-content" data-aos="fade-up">
+                    <h2 class="section-title">Our Success Stories</h2>
+                    <p>At Zahavan, we take pride in the tangible results we deliver to our clients. Browse through our case studies to see how our consultancy services have helped businesses across various industries overcome challenges, seize opportunities, and achieve significant growth.</p>
+                    <p>Each case study details the client's initial situation, the strategies we implemented, and the measurable outcomes achieved. These real-world examples demonstrate our practical approach to business consultancy and our commitment to delivering value.</p>
                 </div>
             </div>
         </section>
 
-        <section class="testimonials">
+        <section class="case-studies-grid">
             <div class="container">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <p class="quote">"Zahavan transformed our business strategy and helped us achieve 45% growth in just six months."</p>
-                        <div class="client">
-                            <div class="client-image"></div>
-                            <div class="client-info">
-                                <h4>Sarah Johnson</h4>
-                                <p>CEO, TechStart Inc.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="quote">"Their financial planning services gave us the roadmap we needed to secure funding and scale our operations."</p>
-                        <div class="client">
-                            <div class="client-image"></div>
-                            <div class="client-info">
-                                <h4>Michael Chen</h4>
-                                <p>Founder, GrowthBox</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="quote">"The market analysis provided by Zahavan was instrumental in our successful product launch and positioning."</p>
-                        <div class="client">
-                            <div class="client-image"></div>
-                            <div class="client-info">
-                                <h4>Emma Rodriguez</h4>
-                                <p>Marketing Director, Elevate Solutions</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="case-study-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="strategy">Strategy</button>
+                    <button class="filter-btn" data-filter="data">Data & Analytics</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="coaching">Business Coaching</button>
                 </div>
-                <div class="slider-controls">
-                    <button class="prev-slide">&lt;</button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+
+                <div class="case-study-message">
+                    <h3>Case Studies Coming Soon</h3>
+                    <p>We're currently preparing detailed case studies that highlight our successful client engagements. Check back soon to explore real-world examples of how we've helped businesses achieve their goals.</p>
+                    <p>In the meantime, please <a href="contact.html">contact us</a> if you'd like to discuss how our services can benefit your specific business needs.</p>
+                </div>
+
+                <!-- Placeholder for future case studies -->
+                <div class="case-studies-placeholder">
+                    <div class="case-study-card" data-category="strategy data">
+                        <div class="case-study-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Case Study">
+                            <div class="case-study-overlay">
+                                <span class="category">Strategy, Data & Analytics</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3>Coming Soon: Market Expansion Strategy</h3>
+                            <p>How we helped a mid-sized company expand into new markets using data-driven decision making.</p>
+                            <a href="#" class="btn btn-outline disabled">Read Case Study</a>
+                        </div>
                     </div>
-                    <button class="next-slide">&gt;</button>
+
+                    <div class="case-study-card" data-category="marketing">
+                        <div class="case-study-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Case Study">
+                            <div class="case-study-overlay">
+                                <span class="category">Marketing & Communications</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3>Coming Soon: Digital Marketing Transformation</h3>
+                            <p>How we revitalized a traditional business's marketing approach for the digital age.</p>
+                            <a href="#" class="btn btn-outline disabled">Read Case Study</a>
+                        </div>
+                    </div>
+
+                    <div class="case-study-card" data-category="coaching">
+                        <div class="case-study-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Case Study">
+                            <div class="case-study-overlay">
+                                <span class="category">Business Coaching</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3>Coming Soon: Leadership Development Program</h3>
+                            <p>How our coaching program transformed a struggling executive team into effective leaders.</p>
+                            <a href="#" class="btn btn-outline disabled">Read Case Study</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -138,9 +131,9 @@
         <section class="cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to transform your business?</h2>
-                    <p>Schedule a free consultation with our expert team today.</p>
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <h2>Ready to create your own success story?</h2>
+                    <p>Contact us today to discuss how we can help your business achieve remarkable results.</p>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </section>
