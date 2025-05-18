@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize form validation
     initFormValidation();
+
+    // Initialize partner modal
+    initPartnerModal();
 });
 
 // Window Load Function for additional elements that might take longer to load
@@ -443,5 +446,72 @@ function initWaves() {
                 wave.style.opacity = '1';
             });
         }, 100);
+    }
+}
+
+// Initialize partner modal functionality
+function initPartnerModal() {
+    const partnerCards = document.querySelectorAll('.partner-card');
+    const modal = document.getElementById('partner-modal');
+    const modalBody = document.getElementById('modal-body');
+    const closeButton = document.querySelector('.modal .close-button');
+
+    if (partnerCards.length > 0 && modal && modalBody && closeButton) {
+        partnerCards.forEach(card => {
+            const overlayLink = card.querySelector('.partner-link-overlay');
+            if (overlayLink) {
+                overlayLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const partnerId = card.getAttribute('data-partner-id');
+                    if (partnerId) {
+                        const detailsDiv = document.getElementById(partnerId + '-details');
+                        if (detailsDiv) {
+                            // Clear previous modal content
+                            modalBody.innerHTML = '';
+                            // Copy content to modal
+                            modalBody.innerHTML = detailsDiv.innerHTML;
+                            
+                            // Display the modal and add show class for animation
+                            modal.style.display = 'flex'; // Use flex to center content
+                            // Use setTimeout to allow display: flex to apply before transition
+                            setTimeout(() => {
+                                modal.classList.add('show');
+                            }, 10); // A small delay like 10ms or requestAnimationFrame is often enough
+                        }
+                    }
+                });
+            }
+        });
+
+        // Function to close modal
+        function closePartnerModal() {
+            modal.classList.remove('show'); // Start fade out
+            // Wait for the transition to end before hiding completely
+            modal.addEventListener('transitionend', function(e) {
+                // Ensure it's the opacity transition and the modal is not showing
+                if (e.propertyName === 'opacity' && !modal.classList.contains('show')) {
+                    modal.style.display = 'none';
+                }
+            }, { once: true }); // Use { once: true } to remove the listener after it runs
+        }
+
+        // Close the modal when the close button is clicked
+        closeButton.addEventListener('click', function() {
+            closePartnerModal();
+        });
+
+        // Close the modal when clicking outside the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closePartnerModal();
+            }
+        });
+
+         // Close modal with Escape key
+         document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.classList.contains('show')) {
+                closePartnerModal();
+            }
+        });
     }
 } 

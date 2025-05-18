@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B33F8XP7T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3B33F8XP7T');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Partners - Zahavan</title>
@@ -17,19 +25,19 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">Zahavan</a>
+                <a href="index.html" target="_blank">Zahavan</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="partners.html" class="active">Partners</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="services.html" target="_blank">Services</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="partners.html" class="active" target="_blank">Partners</a></li>
+                    <li><a href="case-studies.html" target="_blank">Case Studies</a></li>
                 </ul>
             </nav>
             <div class="cta-button">
-                <a href="contact.html" class="btn">Contact Now</a>
+                <a href="contact.html" class="btn" target="_blank">Contact Now</a>
             </div>
             <div class="mobile-toggle">
                 <span></span>
@@ -64,51 +72,91 @@
             </div>
         </section>
 
-        <section class="partners-list">
+        <section class="partners-grid">
             <div class="container">
-                <div class="partner-item" data-aos="fade-up">
-                    <div class="partner-logo">
-                        <img src="pAI2-Logo.jpeg" alt="pAI Squared Logo" style="width: 15%; height: 15%;">
-                    </div>
-                    <div class="partner-content">
+                <div class="partner-card" data-aos="fade-up" data-partner-id="pai-squared">
+                    <a href="#" class="partner-link-overlay" aria-label="Learn more about pAI Squared" target="_blank"></a>
+                    <div class="card-content">
+                        <div class="partner-logo">
+                            <img src="pAI2-Logo.jpeg" alt="pAI Squared Logo">
+                        </div>
+                        <h3>pAI Squared</h3>
                         <p>pAI Squared specializes in advanced artificial intelligence solutions and machine learning technologies. Together, we help businesses implement cutting-edge AI applications that drive efficiency, improve decision-making, and create competitive advantages in their respective markets.</p>
                     </div>
                 </div>
                 
-                <div class="partner-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="partner-logo">
-                        <img src="benson-health-logo-dark.png"  alt="BensonHealth Logo" style="width: 30%; height: 30%;">
-                    </div>
-                    <div class="partner-content">
+                <div class="partner-card" data-aos="fade-up" data-aos-delay="100" data-partner-id="bensonhealth">
+                    <a href="#" class="partner-link-overlay" aria-label="Learn more about BensonHealth" target="_blank"></a>
+                    <div class="card-content">
+                        <div class="partner-logo">
+                            <img src="benson-health-logo-dark.png" alt="BensonHealth Logo">
+                        </div>
+                        <h3>BensonHealth</h3>
                         <p>BensonHealth is a leading healthcare solutions provider with expertise in digital health transformation and healthcare analytics. Our partnership enables us to offer specialized consultancy services to healthcare organizations, helping them improve patient outcomes while optimizing operational efficiency.</p>
                     </div>
                 </div>
                 
-                <div class="partner-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="partner-logo">
-                        <img src="Synergia Logo Final.jpeg" alt="Synergia Logo" style="width: 25%; height: 25%;">
-                    </div>
-                    <div class="partner-content">
+                <div class="partner-card" data-aos="fade-up" data-aos-delay="200" data-partner-id="synergia">
+                    <a href="#" class="partner-link-overlay" aria-label="Learn more about Synergia" target="_blank"></a>
+                    <div class="card-content">
+                        <div class="partner-logo">
+                            <img src="Synergia Logo Final.jpeg" alt="Synergia Logo">
+                        </div>
+                        <h3>Synergia</h3>
                         <p>Synergia offers innovative sustainability and environmental consulting services. Through our partnership, we help businesses develop and implement sustainable practices, reduce environmental impact, and create long-term value through responsible business operations and green initiatives.</p>
                     </div>
                 </div>
-                <div class="partner-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="partner-logo">
-                        <img src="P4C-logo-final.jpeg" alt="Partners4Change Logo" style="width: 20%; height: 20%;">
-                    </div>
-                    <div class="partner-content">
+                <div class="partner-card" data-aos="fade-up" data-aos-delay="300" data-partner-id="partners4change">
+                    <a href="#" class="partner-link-overlay" aria-label="Learn more about Partners4Change" target="_blank"></a>
+                    <div class="card-content">
+                        <div class="partner-logo">
+                            <img src="P4C-logo-final.jpeg" alt="Partners4Change Logo">
+                        </div>
+                        <h3>Partners4Change</h3>
                         <p>Partners4Change specializes in organizational change management and transformation strategies. Our collaboration allows us to provide comprehensive change management solutions that ensure successful implementation of strategic initiatives, digital transformations, and organizational restructuring.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Hidden Partner Details for Popups -->
+        <div id="pai-squared-details" class="partner-details" style="display: none;">
+            <h2>pAI Squared</h2>
+            <p>Detailed information about pAI Squared: This partnership focuses on leveraging cutting-edge AI and machine learning to provide data-driven insights and automated solutions, helping clients optimize operations and make smarter decisions.</p>
+            <!-- Add more details as needed -->
+        </div>
+        <div id="bensonhealth-details" class="partner-details" style="display: none;">
+            <h2>BensonHealth</h2>
+            <p>Detailed information about BensonHealth: Specializing in healthcare technology and analytics, BensonHealth enables us to offer tailored solutions for healthcare providers, improving patient care and administrative efficiency.</p>
+            <!-- Add more details as needed -->
+        </div>
+        <div id="synergia-details" class="partner-details" style="display: none;">
+            <h2>Synergia</h2>
+            <p>Detailed information about Synergia: Our collaboration with Synergia brings expertise in sustainability and environmental consulting, assisting businesses in adopting eco-friendly practices and achieving their corporate social responsibility goals.</p>
+            <!-- Add more details as needed -->
+        </div>
+        <div id="partners4change-details" class="partner-details" style="display: none;">
+            <h2>Partners4Change</h2>
+            <p>Detailed information about Partners4Change: Focused on organizational change management, Partners4Change helps our clients navigate transitions smoothly, ensuring successful adoption of new strategies and technologies.</p>
+            <!-- Add more details as needed -->
+        </div>
+
+        <!-- The Modal Structure -->
+        <div id="partner-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="modal-body">
+                    <!-- Partner details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
         <section class="partner-cta">
             <div class="container">
                 <div class="partner-cta-content" data-aos="fade-up">
                     <h2>Interested in becoming a partner?</h2>
                     <p>We're always looking to expand our network of strategic partners. If your organization shares our commitment to excellence and innovation, we'd love to explore potential collaboration opportunities.</p>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -116,9 +164,9 @@
         <section class="cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Need consultancy services?</h2>
+                    <h2>Ready to transform your business?</h2>
                     <p>Contact us today to discuss your needs.</p>
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="contact.html" class="btn btn-primary" target="_blank">Get in Touch</a>
                 </div>
             </div>
         </section>
@@ -134,11 +182,11 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="index.html" target="_blank">Home</a></li>
+                        <li><a href="services.html" target="_blank">Services</a></li>
+                        <li><a href="about.html" target="_blank">About Us</a></li>
+                        <li><a href="partners.html" target="_blank">Partners</a></li>
+                        <li><a href="case-studies.html" target="_blank">Case Studies</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -148,7 +196,7 @@
                 <div class="footer-col">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/company/zahavan/" class="social-icon">
+                        <a href="https://www.linkedin.com/company/zahavan/" class="social-icon" target="_blank">
                             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
                     </div>
