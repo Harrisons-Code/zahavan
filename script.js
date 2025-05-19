@@ -444,4 +444,42 @@ function initWaves() {
             });
         }, 100);
     }
-} 
+}
+
+// Text rotation for hero section
+const rotatingTexts = ["Good Advice", "Innovation", "Excellence", "Growth"];
+let currentTextIndex = 0;
+const rotatingTextElement = document.getElementById('rotatingText');
+
+function updateRotatingText() {
+    if (!rotatingTextElement) return;
+    
+    // Fade out
+    rotatingTextElement.style.opacity = '0';
+    
+    setTimeout(() => {
+        // Update text
+        currentTextIndex = (currentTextIndex + 1) % rotatingTexts.length;
+        rotatingTextElement.textContent = rotatingTexts[currentTextIndex];
+        
+        // Fade in
+        rotatingTextElement.style.opacity = '1';
+    }, 500); // Half of the transition time
+}
+
+// Initialize text rotation
+if (rotatingTextElement) {
+    setInterval(updateRotatingText, 3000); // Change text every 3 seconds
+}
+
+// Enhanced button hover effects
+document.querySelectorAll('.btn-modern').forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        button.style.setProperty('--x', `${x}px`);
+        button.style.setProperty('--y', `${y}px`);
+    });
+}); 
