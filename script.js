@@ -454,22 +454,34 @@ const rotatingTextElement = document.getElementById('rotatingText');
 function updateRotatingText() {
     if (!rotatingTextElement) return;
     
-    // Fade out
+    // Fade out and slide down slightly
     rotatingTextElement.style.opacity = '0';
+    rotatingTextElement.style.transform = 'translateY(10px)'; // Slide down
     
     setTimeout(() => {
         // Update text
         currentTextIndex = (currentTextIndex + 1) % rotatingTexts.length;
         rotatingTextElement.textContent = rotatingTexts[currentTextIndex];
         
-        // Fade in
+        // Prepare for slide down (set initial state before fade-in)
+        rotatingTextElement.style.transform = 'translateY(-10px)'; // Start from above
+        rotatingTextElement.style.opacity = '0'; // Ensure it's still invisible after text update
+
+        // Force a reflow to apply the new transform state before transitioning
+        rotatingTextElement.offsetWidth;
+
+        // Fade in and slide down to final position
         rotatingTextElement.style.opacity = '1';
-    }, 500); // Half of the transition time
+        rotatingTextElement.style.transform = 'translateY(0)';
+
+    }, 600); // Increased timeout slightly
 }
 
 // Initialize text rotation
 if (rotatingTextElement) {
-    setInterval(updateRotatingText, 3000); // Change text every 3 seconds
+    // Set initial transition property in JS to handle dynamic transform
+    rotatingTextElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    setInterval(updateRotatingText, 2500); // Change text every 2.5 seconds
 }
 
 // Enhanced button hover effects
